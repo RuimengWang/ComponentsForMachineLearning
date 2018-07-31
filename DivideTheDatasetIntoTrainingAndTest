@@ -1,0 +1,2 @@
+from sklearn.model_selection import train_test_split
+Xtrain,Xtest,Ytrain,Ytest=train_test_split(digits.data,digits.target,test_size=0.2,random_state=2)
