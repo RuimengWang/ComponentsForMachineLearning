@@ -1,2 +1,19 @@
+1. 第一个情况
 from sklearn.model_selection import train_test_split
 Xtrain,Xtest,Ytrain,Ytest=train_test_split(digits.data,digits.target,test_size=0.2,random_state=2)
+
+2. 第二个情况
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn import datasets
+
+iris=datasets.load_iris().data
+iris_pd=pd.DataFrame(iris)
+
+X=iris_pd[[0,1,2]]
+Y=iris_pd[[3]]
+
+X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.2,random_state=42)
+print X_train
+print Y_train
