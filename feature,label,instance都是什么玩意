@@ -1,0 +1,13 @@
+Instance: A single row of data is called an instance. It is an observation from the domain.
+
+Feature(x): A single column of data is called a feature. It is a component of an observation and is also called an attribute of a data instance. Some features may be inputs to a model (the predictors) and others may be outputs or the features to be predicted.
+
+Data Type: Features have a data type. They may be real or integer-valued or may have a categorical or ordinal value. You can have strings, dates, times, and more complex types, but typically they are reduced to real or categorical values when working with traditional machine learning methods.
+
+Datasets: A collection of instances is a dataset and when working with machine learning methods we typically need a few datasets for different purposes.
+
+Training Dataset: A dataset that we feed into our machine learning algorithm to train our model.
+
+Testing Dataset: A dataset that we use to validate the accuracy of our model but is not used to train the model. It may be called the validation dataset.
+
+Label(y): label is what we are going to predict. 
