@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jul 31 22:01:31 2018
+
+@author: wrm
+"""
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+car=pd.read_excel("C:/Users/wrm/Desktop/Car_data.xlsx")
+#print (car)
+
+#print set(list(car["satisfication"]))
+from sklearn import preprocessing
+label_encoder1=preprocessing.LabelEncoder()
+label_encoder1.fit(["low","med","high","vhigh"])
+car["buying"]=label_encoder1.transform(car["buying"])
+
+label_encoder2=preprocessing.LabelEncoder()
+label_encoder2.fit(["low","med","high","vhigh"])
+car["maint"]=label_encoder2.transform(car["maint"])
+
+label_encoder3=preprocessing.LabelEncoder()
+label_encoder3.fit(["small","med","big"])
+car["lug_boot"]=label_encoder3.transform(car["lug_boot"])
+
+label_encoder4=preprocessing.LabelEncoder()
+label_encoder4.fit(["low","med","high"])
+car["safety"]=label_encoder4.transform(car["safety"])
+
+label_encoder5=preprocessing.LabelEncoder()
+label_encoder5.fit(["unacc","acc","good","vgood"])
+car["satisfication"]=label_encoder5.transform(car["satisfication"])
+
+car["doors"]=car["doors"].replace("5more",5)
+car["persons"]=car["persons"].replace("more",5)
+
+#print car
